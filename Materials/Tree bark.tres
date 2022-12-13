@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bsw4anwldugt8"]
+
+[ext_resource type="Shader" path="res://Shaders/Plant.gdshader" id="1_vs2dk"]
+[ext_resource type="Texture2D" uid="uid://b60l16ibrqjsj" path="res://Textures/Trees/bark_brown_02_diff_4k.jpg" id="2_6tux3"]
+[ext_resource type="Texture2D" uid="uid://bexo1kynlmy0o" path="res://Textures/Trees/bark_brown_02_nor_gl_4k.png" id="3_sdyih"]
+[ext_resource type="Texture2D" uid="uid://d2mg2vgc4p1iy" path="res://Textures/Trees/bark_brown_02_arm_4k.jpg" id="4_nkk0v"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vs2dk")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/ao_light_affect = null
+shader_parameter/normal_scale = 1.0
+shader_parameter/point_size = 1.0
+shader_parameter/texture_albedo = ExtResource("2_6tux3")
+shader_parameter/texture_normal = ExtResource("3_sdyih")
+shader_parameter/texture_orm = ExtResource("4_nkk0v")
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/wind_scale = 2.0
+shader_parameter/wind_speed = 2.0
+shader_parameter/wind_strength = 0.25

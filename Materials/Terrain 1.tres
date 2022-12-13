@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://du6lkyfwv87xr"]
+
+[ext_resource type="Shader" path="res://Shaders/Blend4.gdshader" id="1_2rprp"]
+[ext_resource type="CompressedTexture2DArray" uid="uid://dvsl8r1qofqij" path="res://Textures/Terrain/terrain1_color.jpg" id="2_nu8y5"]
+[ext_resource type="CompressedTexture2DArray" uid="uid://dbif8xldpoobk" path="res://Textures/Terrain/terrain1_normal.jpg" id="3_haqib"]
+[ext_resource type="CompressedTexture2DArray" uid="uid://71vvwdpa3fuy" path="res://Textures/Terrain/terrain1_ormh.png" id="4_07cb4"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2rprp")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/ao_light_affect = null
+shader_parameter/heightmap_flip = Vector2(1, 1)
+shader_parameter/heightmap_max_layers = 32
+shader_parameter/heightmap_min_layers = 16
+shader_parameter/heightmap_scale = Vector4(7, 7, 2, 7)
+shader_parameter/normal_scale = 1.0
+shader_parameter/textures_albedo = ExtResource("2_nu8y5")
+shader_parameter/textures_normal = ExtResource("3_haqib")
+shader_parameter/textures_ormh = ExtResource("4_07cb4")
+shader_parameter/uv1_offset = null
+shader_parameter/uv1_scale = Vector2(1, 1)

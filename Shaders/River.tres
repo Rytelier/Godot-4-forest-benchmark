@@ -1,0 +1,81 @@
+[gd_resource type="Shader" format=3 uid="uid://cgnwiwq40xdrw"]
+
+[resource]
+code = "// NOTE: Shader automatically converted from Godot Engine 4.0.beta8.mono's StandardMaterial3D.
+
+shader_type spatial;
+render_mode blend_mix,depth_draw_always,cull_back,diffuse_burley,specular_schlick_ggx;
+uniform vec4 albedo : source_color;
+uniform sampler2D texture_albedo : source_color,filter_linear_mipmap,repeat_enable;
+uniform float point_size : hint_range(0,128);
+uniform float roughness : hint_range(0,1);
+uniform sampler2D texture_metallic : hint_default_white,filter_linear_mipmap,repeat_enable;
+uniform vec4 metallic_texture_channel;
+uniform sampler2D texture_roughness : hint_roughness_r,filter_linear_mipmap,repeat_enable;
+uniform float specular;
+uniform float metallic;
+uniform sampler2D texture_refraction : filter_linear_mipmap,repeat_enable;
+uniform float refraction : hint_range(-16,16);
+uniform vec3 refraction_texture_channel;
+uniform sampler2D texture_normal : hint_roughness_normal,filter_linear_mipmap,repeat_enable;
+uniform float normal_scale : hint_range(-16,16);
+
+uniform sampler2D texture_heightmap : hint_default_black,filter_linear_mipmap,repeat_enable;
+uniform float heightmap_scale;
+uniform int heightmap_min_layers;
+uniform int heightmap_max_layers;
+uniform vec2 heightmap_flip;
+uniform vec3 uv1_scale;
+uniform vec3 uv1_offset;
+uniform float flowSpeed = 0.1;
+
+
+void vertex() {
+	UV=UV*uv1_scale.xy+uv1_offset.xy + vec2(TIME * flowSpeed, 0);
+}
+
+void fragment() {
+	vec2 base_uv = UV;
+		{
+		vec3 view_dir = normalize(normalize(-VERTEX)*mat3(TANGENT*heightmap_flip.x,-BINORMAL*heightmap_flip.y,NORMAL));
+		float num_layers = mix(float(heightmap_max_layers),float(heightmap_min_layers), abs(dot(vec3(0.0, 0.0, 1.0), view_dir)));
+		float layer_depth = 1.0 / num_layers;
+		float current_layer_depth = 0.0;
+		vec2 P = view_dir.xy * heightmap_scale * 0.01;
+		vec2 delta = P / num_layers;
+		vec2 ofs = base_uv;
+		float depth = 1.0 - texture(texture_normal, ofs).a;
+		float current_depth = 0.0;
+		while(current_depth < depth) {
+			ofs -= delta;
+			depth = 1.0 - texture(texture_normal, ofs).a;
+			current_depth += layer_depth;
+		}
+		vec2 prev_ofs = ofs + delta;
+		float after_depth  = depth - current_depth;
+		float before_depth = ( 1.0 - texture(texture_heightmap, prev_ofs).r  ) - current_depth + layer_depth;
+		float weight = after_depth / (after_depth - before_depth);
+		ofs = mix(ofs,prev_ofs,weight);
+		base_uv=ofs;
+	}
+	vec4 albedo_tex = texture(texture_albedo,base_uv);
+	ALBEDO = albedo.rgb * albedo_tex.rgb;
+	float metallic_tex = dot(texture(texture_metallic,base_uv),metallic_texture_channel);
+	METALLIC = metallic_tex * metallic;
+	vec4 roughness_texture_channel = vec4(1.0,0.0,0.0,0.0);
+	float roughness_tex = dot(texture(texture_roughness,base_uv),roughness_texture_channel);
+	ROUGHNESS = roughness_tex * roughness;
+	SPECULAR = specular;
+	NORMAL_MAP = texture(texture_normal,base_uv).rgb;
+	NORMAL_MAP_DEPTH = normal_scale;
+	vec3 unpacked_normal = NORMAL_MAP;
+	unpacked_normal.xy = unpacked_normal.xy * 2.0 - 1.0;
+	unpacked_normal.z = sqrt(max(0.0, 1.0 - dot(unpacked_normal.xy, unpacked_normal.xy)));
+	vec3 ref_normal = normalize( mix(NORMAL,TANGENT * unpacked_normal.x + BINORMAL * unpacked_normal.y + NORMAL * unpacked_normal.z,NORMAL_MAP_DEPTH) );
+	vec2 ref_ofs = SCREEN_UV - ref_normal.xy * dot(unpacked_normal,refraction_texture_channel) * refraction;
+	float ref_amount = 1.0 - albedo.a * albedo_tex.a;
+	EMISSION += textureLod(SCREEN_TEXTURE,ref_ofs,ROUGHNESS * 8.0).rgb * ref_amount;
+	ALBEDO *= 1.0 - ref_amount;
+	ALPHA = 1.0;
+}
+"

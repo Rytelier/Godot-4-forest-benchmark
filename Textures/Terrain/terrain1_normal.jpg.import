@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://dbif8xldpoobk"
+path.etc2="res://.godot/imported/terrain1_normal.jpg-610517d75a76e8015810141779cec8ef.etc2.ctexarray"
+path.s3tc="res://.godot/imported/terrain1_normal.jpg-610517d75a76e8015810141779cec8ef.s3tc.ctexarray"
+metadata={
+"imported_formats": ["etc2", "s3tc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Textures/Terrain/terrain1_normal.jpg"
+dest_files=["res://.godot/imported/terrain1_normal.jpg-610517d75a76e8015810141779cec8ef.etc2.ctexarray", "res://.godot/imported/terrain1_normal.jpg-610517d75a76e8015810141779cec8ef.s3tc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/channel_pack=2
+mipmaps/generate=true
+mipmaps/limit=-1
+slices/horizontal=2
+slices/vertical=2

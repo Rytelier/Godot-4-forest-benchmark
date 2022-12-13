@@ -1,0 +1,36 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bexo1kynlmy0o"
+path.s3tc="res://.godot/imported/bark_brown_02_nor_gl_4k.png-9f5f5ffdf14d57e85a7926885ce63fac.s3tc.ctex"
+path.etc2="res://.godot/imported/bark_brown_02_nor_gl_4k.png-9f5f5ffdf14d57e85a7926885ce63fac.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc", "etc2"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Textures/Trees/bark_brown_02_nor_gl_4k.png"
+dest_files=["res://.godot/imported/bark_brown_02_nor_gl_4k.png-9f5f5ffdf14d57e85a7926885ce63fac.s3tc.ctex", "res://.godot/imported/bark_brown_02_nor_gl_4k.png-9f5f5ffdf14d57e85a7926885ce63fac.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/bptc_ldr=0
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://Textures/Trees/bark_brown_02_nor_gl_4k.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

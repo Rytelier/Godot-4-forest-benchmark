@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cp78au3icasgu"]
+
+[ext_resource type="Texture2D" uid="uid://c4viub0rpbjkg" path="res://Textures/Rocks/rock_moss_set_02_diff_4k.jpg" id="1_ojlcb"]
+[ext_resource type="Texture2D" uid="uid://dikuokv660ro7" path="res://Textures/Rocks/rock_moss_set_02_nor_gl_4k.jpg" id="2_5r1bm"]
+[ext_resource type="Texture2D" uid="uid://b0ydvm0mn0vre" path="res://Textures/Rocks/rock_moss_set_02_rough_4k.jpg" id="3_inomm"]
+
+[resource]
+albedo_texture = ExtResource("1_ojlcb")
+roughness_texture = ExtResource("3_inomm")
+normal_enabled = true
+normal_texture = ExtResource("2_5r1bm")

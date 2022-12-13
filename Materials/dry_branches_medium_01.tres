@@ -1,0 +1,12 @@
+[gd_resource type="ORMMaterial3D" load_steps=4 format=3 uid="uid://thf15kaoyvko"]
+
+[ext_resource type="Texture2D" uid="uid://dsonqcytb1a55" path="res://Textures/Trees/dry_branches_medium_01_diff_4k.jpg" id="1_peu1m"]
+[ext_resource type="Texture2D" uid="uid://di0hxfv7i7dfx" path="res://Textures/Trees/dry_branches_medium_01_nor_gl_4k.png" id="2_pdkkq"]
+[ext_resource type="Texture2D" uid="uid://coqr066avrjoc" path="res://Textures/Trees/dry_branches_medium_01_arm_4k.jpg" id="3_ow4nm"]
+
+[resource]
+albedo_texture = ExtResource("1_peu1m")
+orm_texture = ExtResource("3_ow4nm")
+normal_enabled = true
+normal_texture = ExtResource("2_pdkkq")
+ao_enabled = true

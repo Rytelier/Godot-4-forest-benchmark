@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://diftupmtbkgx3"]
+
+[ext_resource type="Texture2D" uid="uid://bvfy2e2uonorg" path="res://Textures/Plants/fern_02_diff_4k.png" id="1_2tjec"]
+[ext_resource type="Shader" path="res://Shaders/Plant.gdshader" id="1_j047b"]
+[ext_resource type="Texture2D" uid="uid://djksxcmlg3eyh" path="res://Textures/Plants/fern_02_nor_gl_4k.png" id="2_5emt5"]
+[ext_resource type="Texture2D" uid="uid://b1svxmgf4dhwn" path="res://Textures/Plants/fern_02_rough_4k.png" id="3_gtg7t"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_j047b")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/alpha_scissor_threshold = 0.5
+shader_parameter/ao_light_affect = 1.0
+shader_parameter/normal_scale = 1.0
+shader_parameter/point_size = 1.0
+shader_parameter/texture_albedo = ExtResource("1_2tjec")
+shader_parameter/texture_normal = ExtResource("2_5emt5")
+shader_parameter/texture_orm = ExtResource("3_gtg7t")
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/wind_scale = 5.0
+shader_parameter/wind_speed = 3.0
+shader_parameter/wind_strength = 0.05

@@ -1,0 +1,19 @@
+Branches:
+	https://polyhaven.com/a/dry_branches_medium_01
+Grass:
+	https://polyhaven.com/a/grass_medium_01
+Ferns:
+	https://polyhaven.com/a/fern_02
+Rocks:
+	https://polyhaven.com/a/rock_moss_set_02
+	https://polyhaven.com/a/rock_moss_set_01
+Tree textures:
+	https://polyhaven.com/a/bark_brown_02
+	https://ambientcg.com/view?id=Leaf001
+Terrain textures:
+	https://polyhaven.com/a/forest_ground_04
+	https://polyhaven.com/a/forest_leaves_03
+	https://polyhaven.com/a/rocks_ground_01
+	https://polyhaven.com/a/brown_mud_leaves_01
+	https://polyhaven.com/a/rocks_ground_03
+	https://polyhaven.com/a/brown_mud_dry
