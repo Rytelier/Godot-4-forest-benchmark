@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cbt54fr3tc1v3"
+uid="uid://c0k2bktwsmoov"
 path="res://.godot/imported/Main Terrain.glb-e8e4059e9a01481bae2cbe4bd321fe6f.scn"
 
 [deps]
@@ -37,9 +37,21 @@ _subresources={
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Terrain 1.tres"
 },
-"Terrain 2": {
+"Terrain.001": {
 "use_external/enabled": true,
-"use_external/path": "res://Materials/Terrain 2.tres"
+"use_external/path": "res://Materials/Terrain 1.tres"
+}
+},
+"meshes": {
+"Main Terrain_Plane090": {
+"generate/lightmap_uv": 2,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }

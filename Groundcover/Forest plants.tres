@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=11 format=3 uid="uid://biegk4ai5urjs"]
+
+[ext_resource type="PackedScene" uid="uid://v8kvepmqvsuy" path="res://Meshes/Plants/fern_02_a.glb" id="1_d85le"]
+[ext_resource type="Script" path="res://addons/groundcover/GroundcoverData.gd" id="1_ghojo"]
+[ext_resource type="Script" path="res://addons/groundcover/GroundcoverMesh.gd" id="2_vspk0"]
+[ext_resource type="PackedScene" uid="uid://cdememrh5jum8" path="res://Meshes/Plants/fern_02_b.glb" id="3_4x3i5"]
+[ext_resource type="PackedScene" uid="uid://tuuxa576ddlj" path="res://Meshes/Plants/fern_02_c.glb" id="4_byog2"]
+[ext_resource type="PackedScene" uid="uid://d2wew3bpstc4v" path="res://Meshes/Plants/fern_02_d.glb" id="5_0d6uh"]
+
+[sub_resource type="Resource" id="Resource_7k4sk"]
+script = ExtResource("2_vspk0")
+mesh = ExtResource("1_d85le")
+id = ""
+
+[sub_resource type="Resource" id="Resource_w02c8"]
+script = ExtResource("2_vspk0")
+mesh = ExtResource("3_4x3i5")
+id = ""
+
+[sub_resource type="Resource" id="Resource_amp1m"]
+script = ExtResource("2_vspk0")
+mesh = ExtResource("4_byog2")
+id = ""
+
+[sub_resource type="Resource" id="Resource_0irmg"]
+script = ExtResource("2_vspk0")
+mesh = ExtResource("5_0d6uh")
+id = ""
+
+[resource]
+script = ExtResource("1_ghojo")
+meshes = [SubResource("Resource_7k4sk"), SubResource("Resource_w02c8"), SubResource("Resource_amp1m"), SubResource("Resource_0irmg")]
+chunkSize = 50
+viewDistance = 200.0
