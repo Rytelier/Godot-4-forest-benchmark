@@ -34,8 +34,8 @@ _global_script_class_icons={
 
 config/name="Forest Benchmark"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.0", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.0", "Forward Plus")
+config/icon="res://icon.png"
 
 [dotnet]
 
@@ -43,7 +43,7 @@ project/assembly_name="Forest Benchmark"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/groundcover/plugin.cfg", "res://addons/map_importer/plugin.cfg")
+enabled=PackedStringArray("res://addons/groundcover/plugin.cfg")
 
 [rendering]
 
