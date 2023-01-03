@@ -36,4 +36,5 @@ shader_parameter/heightmap_flip = Vector2(1, 1)
 shader_parameter/uv1_scale = Vector3(1, 1, 1)
 shader_parameter/uv1_offset = Vector3(0, 0, 0)
 shader_parameter/flowSpeed = 0.5
+shader_parameter/flowDir = Vector2(0, -1)
 shader_parameter/texture_normal = SubResource("NoiseTexture2D_i4o0q")

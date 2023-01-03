@@ -1,13 +1,15 @@
-[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://c7aj0l63pmw5h"]
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://c7aj0l63pmw5h"]
 
-[ext_resource type="Shader" path="res://Shaders/Blend4 vcol.gdshader" id="1_2rprp"]
+[ext_resource type="Shader" path="res://Shaders/Blend8 splat.gdshader" id="1_g2e7u"]
+[ext_resource type="Texture2D" uid="uid://dc8jejeykrsk7" path="res://Textures/Splat map 1.png" id="2_6h0hw"]
 [ext_resource type="CompressedTexture2DArray" uid="uid://dvsl8r1qofqij" path="res://Textures/Terrain/terrain1_color.jpg" id="2_nu8y5"]
 [ext_resource type="CompressedTexture2DArray" uid="uid://dbif8xldpoobk" path="res://Textures/Terrain/terrain1_normal.jpg" id="3_haqib"]
+[ext_resource type="Texture2D" uid="uid://ca5mm3mp1y6p" path="res://Textures/Splat map 2.png" id="3_urbor"]
 [ext_resource type="CompressedTexture2DArray" uid="uid://71vvwdpa3fuy" path="res://Textures/Terrain/terrain1_ormh.png" id="4_07cb4"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_2rprp")
+shader = ExtResource("1_g2e7u")
 shader_parameter/albedo = Color(1, 1, 1, 1)
 shader_parameter/normal_scale = 1.0
 shader_parameter/ao_light_affect = null
@@ -17,6 +19,8 @@ shader_parameter/heightmap_max_layers = 32
 shader_parameter/heightmap_flip = Vector2(1, 1)
 shader_parameter/uv1_scale = Vector2(1, 1)
 shader_parameter/uv1_offset = null
+shader_parameter/splatMap_0 = ExtResource("2_6h0hw")
+shader_parameter/splatMap_1 = ExtResource("3_urbor")
 shader_parameter/textures_albedo = ExtResource("2_nu8y5")
 shader_parameter/textures_ormh = ExtResource("4_07cb4")
 shader_parameter/textures_normal = ExtResource("3_haqib")

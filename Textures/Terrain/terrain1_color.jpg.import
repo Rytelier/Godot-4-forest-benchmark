@@ -25,4 +25,4 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 slices/horizontal=2
-slices/vertical=2
+slices/vertical=4

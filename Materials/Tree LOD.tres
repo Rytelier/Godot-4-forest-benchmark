@@ -1,0 +1,18 @@
+[gd_resource type="ORMMaterial3D" load_steps=4 format=3 uid="uid://dwi7bxaghhoc4"]
+
+[ext_resource type="Texture2D" uid="uid://hq2b5qxno5e3" path="res://Textures/Trees/Tree_Branch_LOD_BaseColor.png" id="1_qi1hi"]
+[ext_resource type="Texture2D" uid="uid://dkd2tsnpov25v" path="res://Textures/Trees/Tree_Branch_LOD_Normal.png" id="2_nxptu"]
+[ext_resource type="Texture2D" uid="uid://bkm6a7fcjnucu" path="res://Textures/Trees/Tree_Branch_LOD_orm.png" id="3_pgjma"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_qi1hi")
+orm_texture = ExtResource("3_pgjma")
+normal_enabled = true
+normal_texture = ExtResource("2_nxptu")
+uv1_scale = Vector3(0.544, 0.544, 0.544)
+uv1_offset = Vector3(0.051, 0.437, -0.099)
+billboard_mode = 2

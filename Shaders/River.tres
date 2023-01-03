@@ -28,10 +28,10 @@ uniform vec2 heightmap_flip;
 uniform vec3 uv1_scale;
 uniform vec3 uv1_offset;
 uniform float flowSpeed = 0.1;
-
+uniform vec2 flowDir;
 
 void vertex() {
-	UV=UV*uv1_scale.xy+uv1_offset.xy + vec2(TIME * flowSpeed, 0);
+	UV=UV*uv1_scale.xy+uv1_offset.xy + flowDir * TIME * flowSpeed;
 }
 
 void fragment() {
