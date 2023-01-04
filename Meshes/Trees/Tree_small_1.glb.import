@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ck5ucqsebvrtj"
+uid="uid://dob15nlt6p87l"
 path="res://.godot/imported/Tree_small_1.glb-79705ba1053b4e733bd25478ac5a5cda.scn"
 
 [deps]
@@ -26,7 +26,7 @@ skins/use_named_skins=true
 animation/import=true
 animation/fps=30
 animation/trimming=false
-import_script/path=""
+import_script/path="res://Scripts/Import/Tree_LOD.gd"
 _subresources={
 "materials": {
 "Bark": {
@@ -36,6 +36,14 @@ _subresources={
 "Tree branch": {
 "use_external/enabled": true,
 "use_external/path": "res://Materials/Tree branch.tres"
+},
+"Tree branch lod": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Tree branch LOD.tres"
+},
+"Tree lod": {
+"use_external/enabled": true,
+"use_external/path": "res://Materials/Tree LOD.tres"
 }
 }
 }
