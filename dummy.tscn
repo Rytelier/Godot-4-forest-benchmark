@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://chc17u5xovrh2"]
+
+[ext_resource type="Shader" path="res://Shaders/Sky/sky volumetric clouds.gdshader" id="1_lva2i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yrwfc"]
+shader = ExtResource("1_lva2i")
+shader_parameter/cloud_density = 0.05
+shader_parameter/cloud_coverage = 0.25
+shader_parameter/cloud_time_scale = 1.0
+shader_parameter/cloud_time_offset = 0.0
+shader_parameter/cloud_direction = Vector2(0.9, 1)
+shader_parameter/cloud_stepsRange = Vector2(96, 54)
+shader_parameter/clouds_screen_lod = 1.0
+shader_parameter/cloud_modulate = Color(1, 1, 1, 1)
+shader_parameter/cloud_cameraPositionMult = Vector2(0.1, 0.2)
+shader_parameter/cloud_cameraHeight = null
+shader_parameter/rayleigh = 2.0
+shader_parameter/rayleigh_color = Color(0.26, 0.41, 0.58, 1)
+shader_parameter/mie = 0.005
+shader_parameter/mie_eccentricity = 0.8
+shader_parameter/mie_color = Color(0.63, 0.77, 0.92, 1)
+shader_parameter/turbidity = 10.0
+shader_parameter/sun_disk_scale = 1.0
+shader_parameter/ground_color = Color(1, 1, 1, 1)
+shader_parameter/exposure = 0.1
+shader_parameter/spaceEmit_color = Color(1, 1, 1, 1)
+shader_parameter/spaceEmit_angle = null
+shader_parameter/spaceEmit_strength = 1.0
+
+[sub_resource type="Sky" id="Sky_m61jp"]
+sky_material = SubResource("ShaderMaterial_yrwfc")
+
+[sub_resource type="Environment" id="Environment_giwak"]
+background_mode = 2
+sky = SubResource("Sky_m61jp")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_giwak")

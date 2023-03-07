@@ -3,22 +3,23 @@
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
 uid="uid://88ap4pfycrc5"
-path="res://.godot/imported/terrain2_ormh.png-6e434479209a9dfe17b722dabdbf1a98.ctexarray"
+path.s3tc="res://.godot/imported/terrain2_ormh.png-6e434479209a9dfe17b722dabdbf1a98.s3tc.ctexarray"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Terrain/terrain2_ormh.png"
-dest_files=["res://.godot/imported/terrain2_ormh.png-6e434479209a9dfe17b722dabdbf1a98.ctexarray"]
+dest_files=["res://.godot/imported/terrain2_ormh.png-6e434479209a9dfe17b722dabdbf1a98.s3tc.ctexarray"]
 
 [params]
 
-compress/mode=3
+compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1

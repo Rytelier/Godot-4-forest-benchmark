@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=11 format=3 uid="uid://biegk4ai5urjs"]
+[gd_resource type="Resource" script_class="Groundcover_Data" load_steps=11 format=3 uid="uid://biegk4ai5urjs"]
 
 [ext_resource type="PackedScene" uid="uid://v8kvepmqvsuy" path="res://Meshes/Plants/fern_02_a.glb" id="1_d85le"]
 [ext_resource type="Script" path="res://addons/groundcover/GroundcoverData.gd" id="1_ghojo"]

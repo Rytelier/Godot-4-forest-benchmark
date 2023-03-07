@@ -2,25 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0skseaofsmrm"
+uid="uid://5p2b7fuuw3xc"
 path.s3tc="res://.godot/imported/Tree_Branch_Normal.png-6dcb479f37fa0ade1dc9990f5177048a.s3tc.ctex"
-path.etc2="res://.godot/imported/Tree_Branch_Normal.png-6dcb479f37fa0ade1dc9990f5177048a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc", "etc2"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Trees/Tree_Branch_Normal.png"
-dest_files=["res://.godot/imported/Tree_Branch_Normal.png-6dcb479f37fa0ade1dc9990f5177048a.s3tc.ctex", "res://.godot/imported/Tree_Branch_Normal.png-6dcb479f37fa0ade1dc9990f5177048a.etc2.ctex"]
+dest_files=["res://.godot/imported/Tree_Branch_Normal.png-6dcb479f37fa0ade1dc9990f5177048a.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true

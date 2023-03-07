@@ -30,6 +30,8 @@ uniform vec3 uv1_offset;
 uniform float flowSpeed = 0.1;
 uniform vec2 flowDir;
 
+uniform sampler2D SCREEN : hint_screen_texture, filter_linear_mipmap, repeat_disable;
+
 void vertex() {
 	UV=UV*uv1_scale.xy+uv1_offset.xy + flowDir * TIME * flowSpeed;
 }
@@ -74,7 +76,7 @@ void fragment() {
 	vec3 ref_normal = normalize( mix(NORMAL,TANGENT * unpacked_normal.x + BINORMAL * unpacked_normal.y + NORMAL * unpacked_normal.z,NORMAL_MAP_DEPTH) );
 	vec2 ref_ofs = SCREEN_UV - ref_normal.xy * dot(unpacked_normal,refraction_texture_channel) * refraction;
 	float ref_amount = 1.0 - albedo.a * albedo_tex.a;
-	EMISSION += textureLod(SCREEN_TEXTURE,ref_ofs,ROUGHNESS * 8.0).rgb * ref_amount;
+	EMISSION += textureLod(SCREEN,ref_ofs,ROUGHNESS * 8.0).rgb * ref_amount;
 	ALBEDO *= 1.0 - ref_amount;
 	ALPHA = 1.0;
 }

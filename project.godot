@@ -8,28 +8,6 @@
 
 config_version=5
 
-_global_script_classes=[{
-"base": "RefCounted",
-"class": &"GroundcoverChunkData",
-"language": &"GDScript",
-"path": "res://addons/groundcover/GroundcoverChunkData.gd"
-}, {
-"base": "Resource",
-"class": &"Groundcover_Data",
-"language": &"GDScript",
-"path": "res://addons/groundcover/GroundcoverData.gd"
-}, {
-"base": "Resource",
-"class": &"Groundcover_Mesh",
-"language": &"GDScript",
-"path": "res://addons/groundcover/GroundcoverMesh.gd"
-}]
-_global_script_class_icons={
-"GroundcoverChunkData": "",
-"Groundcover_Data": "",
-"Groundcover_Mesh": ""
-}
-
 [application]
 
 config/name="Forest Benchmark"
@@ -40,10 +18,6 @@ config/icon="res://icon.png"
 [dotnet]
 
 project/assembly_name="Forest Benchmark"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/groundcover/plugin.cfg")
 
 [rendering]
 

@@ -210,8 +210,8 @@ vec4 march(vec3 pos,  vec3 end, vec3 dir, int depth) {
 	vec3 atmosphere_ground = atmosphere(normalize(vec3(1.0, -1.0, 0.0)), vec2(0), 0);
 	
 	const float weather_scale = 0.00006;
-	const float time = TIME * 0.003 * cloud_time_scale + 0.005* cloud_time_offset;
-	const vec2 weather_pos = vec2(time * cloud_direction.x, time * cloud_direction.y);
+	float time = TIME * 0.003 * cloud_time_scale + 0.005* cloud_time_offset;
+	vec2 weather_pos = vec2(time * cloud_direction.x, time * cloud_direction.y);
 	
 	for (int i = 0; i < depth; i++) {
 		p += dir * ss;

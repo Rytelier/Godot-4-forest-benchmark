@@ -2,8 +2,8 @@
 
 [ext_resource type="Shader" path="res://Shaders/Blend8 splat.gdshader" id="1_g2e7u"]
 [ext_resource type="Texture2D" uid="uid://dc8jejeykrsk7" path="res://Textures/Splat map 1.png" id="2_6h0hw"]
-[ext_resource type="CompressedTexture2DArray" uid="uid://dvsl8r1qofqij" path="res://Textures/Terrain/terrain1_color.jpg" id="2_nu8y5"]
-[ext_resource type="CompressedTexture2DArray" uid="uid://dbif8xldpoobk" path="res://Textures/Terrain/terrain1_normal.jpg" id="3_haqib"]
+[ext_resource type="CompressedTexture2DArray" uid="uid://dgvwhfehu3f7d" path="res://Textures/Terrain/terrain1_color.jpg" id="2_nu8y5"]
+[ext_resource type="CompressedTexture2DArray" uid="uid://dwcytrkgyw6xy" path="res://Textures/Terrain/terrain1_normal.jpg" id="3_haqib"]
 [ext_resource type="Texture2D" uid="uid://ca5mm3mp1y6p" path="res://Textures/Splat map 2.png" id="3_urbor"]
 [ext_resource type="CompressedTexture2DArray" uid="uid://71vvwdpa3fuy" path="res://Textures/Terrain/terrain1_ormh.png" id="4_07cb4"]
 

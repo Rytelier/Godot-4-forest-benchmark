@@ -2,27 +2,26 @@
 
 importer="2d_array_texture"
 type="CompressedTexture2DArray"
-uid="uid://bjaear2ti3i4w"
-path.etc2="res://.godot/imported/terrain2_normal.jpg-c833ec65d9f631d2a2b7a4915f91b7bc.etc2.ctexarray"
+uid="uid://caiw38a3klx1p"
 path.s3tc="res://.godot/imported/terrain2_normal.jpg-c833ec65d9f631d2a2b7a4915f91b7bc.s3tc.ctexarray"
 metadata={
-"imported_formats": ["etc2", "s3tc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Textures/Terrain/terrain2_normal.jpg"
-dest_files=["res://.godot/imported/terrain2_normal.jpg-c833ec65d9f631d2a2b7a4915f91b7bc.etc2.ctexarray", "res://.godot/imported/terrain2_normal.jpg-c833ec65d9f631d2a2b7a4915f91b7bc.s3tc.ctexarray"]
+dest_files=["res://.godot/imported/terrain2_normal.jpg-c833ec65d9f631d2a2b7a4915f91b7bc.s3tc.ctexarray"]
 
 [params]
 
 compress/mode=2
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
-compress/channel_pack=2
-mipmaps/generate=false
+compress/channel_pack=0
+mipmaps/generate=true
 mipmaps/limit=-1
 slices/horizontal=2
-slices/vertical=2
+slices/vertical=4
